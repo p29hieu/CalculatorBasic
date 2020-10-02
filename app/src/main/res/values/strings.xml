@@ -1,3 +1,4 @@
 <resources>
-  <string name="app_name">CaculatorBasic</string>
+  <string name="app_name">CalculatorBasic</string>
+  <string name="btn_delete"><![CDATA[<<<]]></string>
 </resources>
