@@ -15,13 +15,20 @@
     <item name="android:inputType">none</item>
   </style>
 
-  <style name="button_number">
-    <item name="android:backgroundTint">@android:color/holo_blue_dark</item>
+  <style name="button_func">
     <item name="android:layout_height">wrap_content</item>
     <item name="android:layout_width">wrap_content</item>
-    <item name="android:textSize">@dimen/text_size_button_main</item>
-    <item name="android:textColor">@color/colorButtonNumber</item>
     <item name="android:layout_margin">@dimen/layout_margin_button</item>
+    <item name="android:textSize">@dimen/text_size_button_func</item>
+  </style>
+
+  <style name="button_main" parent="button_func">
+    <item name="android:textSize">@dimen/text_size_button_main</item>
+  </style>
+
+  <style name="button_number" parent="@style/button_main">
+    <item name="android:textColor">@color/colorTextNumber</item>
+    <item name="android:backgroundTint">@color/colorButtonNumber</item>
   </style>
 
 </resources>

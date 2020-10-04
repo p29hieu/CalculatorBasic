@@ -10,24 +10,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="0"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:background="@color/hidden"
+            android:backgroundTint="@color/hidden"
             android:text="O" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_button"
+            android:gravity="center"
+            android:padding="@dimen/layout_margin_button"
             android:text="Standard"
             android:textSize="30sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="end">
 
             <Button
@@ -42,14 +46,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="5"
         android:gravity="bottom">
 
         <EditText
             android:id="@+id/edit_text_input"
             style="@style/InvisibleFocusHolder"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="0"
             android:textAlignment="textEnd"
             android:textSize="100sp" />
@@ -69,56 +73,39 @@
 
             <Button
                 android:id="@+id/btn_mc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layout_margin_button"
+                style="@style/button_func"
                 android:layout_weight="1"
-                android:text="MC"
-                android:textSize="@dimen/text_size_button_func" />
+                android:text="MC" />
 
             <Button
                 android:id="@+id/btn_mr"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layout_margin_button"
+                style="@style/button_func"
                 android:layout_weight="1"
-                android:text="MR"
-                android:textSize="@dimen/text_size_button_func" />
+                android:text="MR" />
 
             <Button
                 android:id="@+id/btn_m_plus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layout_margin_button"
+                style="@style/button_func"
                 android:layout_weight="1"
-                android:text="M+"
-                android:textSize="@dimen/text_size_button_func" />
+                android:text="M+" />
 
             <Button
                 android:id="@+id/btn_m_sub"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layout_margin_button"
+                style="@style/button_func"
                 android:layout_weight="1"
                 android:text="M-" />
 
             <Button
                 android:id="@+id/btn_ms"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layout_margin_button"
+                style="@style/button_func"
                 android:layout_weight="1"
-                android:text="M$"
-                android:textSize="@dimen/text_size_button_func" />
+                android:text="MS" />
 
             <Button
                 android:id="@+id/btn_m_root"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layout_margin_button"
+                style="@style/button_func"
                 android:layout_weight="1"
-                android:text="M^"
-                android:textSize="@dimen/text_size_button_func" />
+                android:text="M^" />
         </LinearLayout>
 
         <TableLayout
@@ -133,34 +120,23 @@
 
                 <Button
                     android:id="@+id/btn_percent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/layout_margin_button"
-                    android:text="%"
-                    android:textSize="@dimen/text_size_button_main" />
+                    style="@style/button_main"
+                    android:text="%" />
 
                 <Button
                     android:id="@+id/btn_square_root"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/layout_margin_button"
-                    android:text="V"
-                    android:textSize="@dimen/text_size_button_main" />
+                    style="@style/button_main"
+                    android:text="V" />
 
                 <Button
                     android:id="@+id/btn_root_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/layout_margin_button"
-                    android:text="X^2"
-                    android:textSize="@dimen/text_size_button_main" />
+                    style="@style/button_main"
+                    android:text="X^2" />
 
                 <Button
-                    android:id="@+id/btn_fraction"
-                    android:layout_width="wrap_content"
-                    android:layout_margin="@dimen/layout_margin_button"
-                    android:text="1/X"
-                    android:textSize="@dimen/text_size_button_main" />
+                    android:id="@+id/btn_delete"
+                    style="@style/button_main"
+                    android:text="@string/btn_delete" />
             </TableRow>
 
             <TableRow
@@ -169,31 +145,24 @@
 
                 <Button
                     android:id="@+id/btn_ce"
-                    android:layout_margin="@dimen/layout_margin_button"
-                    android:text="CE"
-                    android:textSize="@dimen/text_size_button_main" />
+                    style="@style/button_main"
+                    android:text="CE" />
 
                 <Button
                     android:id="@+id/btn_c"
-                    android:layout_margin="@dimen/layout_margin_button"
-                    android:text="C"
-                    android:textSize="@dimen/text_size_button_main" />
+                    style="@style/button_main"
+                    android:text="C" />
+
 
                 <Button
-                    android:id="@+id/btn_delete"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/layout_margin_button"
-                    android:text="@string/btn_delete"
-                    android:textSize="@dimen/text_size_button_main" />
+                    android:id="@+id/btn_fraction"
+                    style="@style/button_main"
+                    android:text="1/X" />
 
                 <Button
                     android:id="@+id/btn_div"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/layout_margin_button"
-                    android:text=":"
-                    android:textSize="@dimen/text_size_button_main" />
+                    style="@style/button_main"
+                    android:text=":" />
             </TableRow>
 
             <TableRow
@@ -217,11 +186,8 @@
 
                 <Button
                     android:id="@+id/btn_mul"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/layout_margin_button"
-                    android:text="X"
-                    android:textSize="@dimen/text_size_button_main" />
+                    style="@style/button_main"
+                    android:text="X" />
             </TableRow>
 
             <TableRow
@@ -245,9 +211,7 @@
 
                 <Button
                     android:id="@+id/btn_s"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/layout_margin_button"
+                    style="@style/button_main"
                     android:text="-" />
             </TableRow>
 
@@ -272,11 +236,8 @@
 
                 <Button
                     android:id="@+id/btn_plus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/layout_margin_button"
-                    android:text="+"
-                    android:textSize="@dimen/text_size_button_main" />
+                    style="@style/button_main"
+                    android:text="+" />
             </TableRow>
 
             <TableRow
@@ -286,11 +247,8 @@
 
                 <Button
                     android:id="@+id/btn_plus_and_sub"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/layout_margin_button"
-                    android:text="+-"
-                    android:textSize="@dimen/text_size_button_main" />
+                    style="@style/button_main"
+                    android:text="+-" />
 
                 <Button
                     android:id="@+id/btn_number_0"
@@ -299,19 +257,13 @@
 
                 <Button
                     android:id="@+id/btn_dot"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/layout_margin_button"
-                    android:text="."
-                    android:textSize="@dimen/text_size_button_main" />
+                    style="@style/button_main"
+                    android:text="." />
 
                 <Button
                     android:id="@+id/btn_equal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/layout_margin_button"
-                    android:text="="
-                    android:textSize="@dimen/text_size_button_main" />
+                    style="@style/button_main"
+                    android:text="=" />
             </TableRow>
         </TableLayout>
 
