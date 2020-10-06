@@ -18,7 +18,8 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/hidden"
-            android:text="O" />
+            android:textSize="25sp"
+            android:text="&#8801;" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -87,13 +88,13 @@
                 android:id="@+id/btn_m_plus"
                 style="@style/button_func"
                 android:layout_weight="1"
-                android:text="M+" />
+                android:text="M&#8314;" />
 
             <Button
                 android:id="@+id/btn_m_sub"
                 style="@style/button_func"
                 android:layout_weight="1"
-                android:text="M-" />
+                android:text="M&#8315;" />
 
             <Button
                 android:id="@+id/btn_ms"
@@ -105,7 +106,7 @@
                 android:id="@+id/btn_m_root"
                 style="@style/button_func"
                 android:layout_weight="1"
-                android:text="M^" />
+                android:text="M&#8319;" />
         </LinearLayout>
 
         <TableLayout
@@ -126,17 +127,17 @@
                 <Button
                     android:id="@+id/btn_square_root"
                     style="@style/button_main"
-                    android:text="V" />
+                    android:text="&#8730;" />
 
                 <Button
                     android:id="@+id/btn_root_2"
                     style="@style/button_main"
-                    android:text="X^2" />
+                    android:text="X&#178;"/>
 
                 <Button
                     android:id="@+id/btn_delete"
                     style="@style/button_main"
-                    android:text="@string/btn_delete" />
+                    android:text="&#8826;&#8855;" />
             </TableRow>
 
             <TableRow
@@ -157,12 +158,13 @@
                 <Button
                     android:id="@+id/btn_fraction"
                     style="@style/button_main"
-                    android:text="1/X" />
+                    android:text="&#8543;&#8339;"
+                    />
 
                 <Button
                     android:id="@+id/btn_div"
                     style="@style/button_main"
-                    android:text=":" />
+                    android:text="&#247;" />
             </TableRow>
 
             <TableRow
@@ -187,7 +189,7 @@
                 <Button
                     android:id="@+id/btn_mul"
                     style="@style/button_main"
-                    android:text="X" />
+                    android:text="&#215;" />
             </TableRow>
 
             <TableRow
@@ -212,7 +214,7 @@
                 <Button
                     android:id="@+id/btn_s"
                     style="@style/button_main"
-                    android:text="-" />
+                    android:text="&#8722;" />
             </TableRow>
 
             <TableRow
@@ -237,7 +239,7 @@
                 <Button
                     android:id="@+id/btn_plus"
                     style="@style/button_main"
-                    android:text="+" />
+                    android:text="&#43;" />
             </TableRow>
 
             <TableRow
@@ -248,7 +250,7 @@
                 <Button
                     android:id="@+id/btn_plus_and_sub"
                     style="@style/button_main"
-                    android:text="+-" />
+                    android:text="&#177;" />
 
                 <Button
                     android:id="@+id/btn_number_0"
@@ -258,12 +260,12 @@
                 <Button
                     android:id="@+id/btn_dot"
                     style="@style/button_main"
-                    android:text="." />
+                    android:text="&#8231;" />
 
                 <Button
                     android:id="@+id/btn_equal"
                     style="@style/button_main"
-                    android:text="=" />
+                    android:text="&#61;" />
             </TableRow>
         </TableLayout>
 
