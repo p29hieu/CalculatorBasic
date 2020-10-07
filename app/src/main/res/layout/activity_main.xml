@@ -18,8 +18,8 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/hidden"
-            android:textSize="25sp"
-            android:text="&#8801;" />
+            android:text="&#8801;"
+            android:textSize="25sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -52,12 +52,8 @@
 
         <EditText
             android:id="@+id/edit_text_input"
-            style="@style/InvisibleFocusHolder"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="0"
-            android:textAlignment="textEnd"
-            android:textSize="100sp" />
+            style="@style/edit_text_main"
+            android:text="0" />
     </LinearLayout>
 
     <LinearLayout
@@ -132,7 +128,7 @@
                 <Button
                     android:id="@+id/btn_root_2"
                     style="@style/button_main"
-                    android:text="X&#178;"/>
+                    android:text="X&#178;" />
 
                 <Button
                     android:id="@+id/btn_delete"
@@ -158,8 +154,7 @@
                 <Button
                     android:id="@+id/btn_fraction"
                     style="@style/button_main"
-                    android:text="&#8543;&#8339;"
-                    />
+                    android:text="&#8543;&#8339;" />
 
                 <Button
                     android:id="@+id/btn_div"
@@ -174,16 +169,19 @@
                 <Button
                     android:id="@+id/btn_number_7"
                     style="@style/button_number"
+                    android:onClick="onClickNumber"
                     android:text="7" />
 
                 <Button
                     android:id="@+id/btn_number_8"
                     style="@style/button_number"
+                    android:onClick="onClickNumber"
                     android:text="8" />
 
                 <Button
                     android:id="@+id/btn_number_9"
                     style="@style/button_number"
+                    android:onClick="onClickNumber"
                     android:text="9" />
 
                 <Button
@@ -199,16 +197,19 @@
                 <Button
                     android:id="@+id/btn_number_4"
                     style="@style/button_number"
+                    android:onClick="onClickNumber"
                     android:text="4" />
 
                 <Button
                     android:id="@+id/btn_number_5"
                     style="@style/button_number"
+                    android:onClick="onClickNumber"
                     android:text="5" />
 
                 <Button
                     android:id="@+id/btn_number_6"
                     style="@style/button_number"
+                    android:onClick="onClickNumber"
                     android:text="6" />
 
                 <Button
@@ -224,16 +225,19 @@
                 <Button
                     android:id="@+id/btn_number_1"
                     style="@style/button_number"
+                    android:onClick="onClickNumber"
                     android:text="1" />
 
                 <Button
                     android:id="@+id/btn_number_2"
                     style="@style/button_number"
+                    android:onClick="onClickNumber"
                     android:text="2" />
 
                 <Button
                     android:id="@+id/btn_number_3"
                     style="@style/button_number"
+                    android:onClick="onClickNumber"
                     android:text="3" />
 
                 <Button
@@ -255,6 +259,7 @@
                 <Button
                     android:id="@+id/btn_number_0"
                     style="@style/button_number"
+                    android:onClick="onClickNumber"
                     android:text="0" />
 
                 <Button

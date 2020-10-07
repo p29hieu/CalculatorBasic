@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="layout_margin_button">3dp</dimen>
+    <dimen name="layout_margin_button">1dp</dimen>
 
     <dimen name="text_size_button_func">18sp</dimen>
     <dimen name="text_size_button_main">25sp</dimen>
