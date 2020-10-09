@@ -3,6 +3,8 @@ package com.example.caculatorbasic
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
+import android.util.Log
+import android.view.View
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -26,6 +28,18 @@ class MainActivity : AppCompatActivity() {
 
         btn_plus.setOnClickListener{
             onClickBtnPlus()
+        }
+
+        btn_sub.setOnClickListener{
+            onClickBtnSub()
+        }
+
+        btn_mul.setOnClickListener{
+            onClickBtnMul()
+        }
+
+        btn_div.setOnClickListener{
+            onClickBtnDiv()
         }
     }
 
@@ -114,5 +128,17 @@ class MainActivity : AppCompatActivity() {
         val lastChar = edit_text_input.text.toString()
         onClickBtnChangeTextView("+")
         Log.d("TAG","What?")
+    }
+
+    fun onClickBtnSub(){
+
+    }
+
+    fun onClickBtnMul(){
+
+    }
+
+    fun onClickBtnDiv(){
+
     }
 }

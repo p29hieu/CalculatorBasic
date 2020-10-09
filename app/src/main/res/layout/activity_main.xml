@@ -213,7 +213,7 @@
                     android:text="6" />
 
                 <Button
-                    android:id="@+id/btn_s"
+                    android:id="@+id/btn_sub"
                     style="@style/button_main"
                     android:text="&#8722;" />
             </TableRow>
