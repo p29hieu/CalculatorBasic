@@ -1,12 +1,17 @@
 package com.example.caculatorbasic
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
+import com.example.caculatorbasic.helpers.Utils
 import kotlinx.android.synthetic.main.activity_main.*
+import java.lang.Error
+import kotlin.math.round
 
 class MainActivity : AppCompatActivity() {
     private var textStr: String = ""
@@ -19,6 +24,11 @@ class MainActivity : AppCompatActivity() {
         btn_delete.setOnClickListener {
             onClickBtnDeleteOne()
         }
+        btn_delete.setOnLongClickListener() {
+            onClickBtnDeleteAll()
+            return@setOnLongClickListener true
+        }
+
         btn_plus_and_sub.setOnClickListener {
             onClickBtnPlusAndSub()
         }
@@ -26,20 +36,28 @@ class MainActivity : AppCompatActivity() {
 //            onClickBtnDot()
         }
 
-        btn_plus.setOnClickListener{
+        btn_plus.setOnClickListener {
             onClickBtnPlus()
         }
 
-        btn_sub.setOnClickListener{
+        btn_sub.setOnClickListener {
             onClickBtnSub()
         }
 
-        btn_mul.setOnClickListener{
+        btn_mul.setOnClickListener {
             onClickBtnMul()
         }
 
-        btn_div.setOnClickListener{
+        btn_div.setOnClickListener {
             onClickBtnDiv()
+        }
+
+        btn_equal.setOnClickListener {
+            onClickBtnEqual()
+        }
+
+        btn_square_root.setOnClickListener {
+            onClickBtnSquareRoot()
         }
     }
 
@@ -74,7 +92,11 @@ class MainActivity : AppCompatActivity() {
         edit_text_input.setSelection(selectionStart - 1)
     }
 
+    @SuppressLint("ResourceType")
     private fun onClickBtnChangeTextView(str: String) {
+        edit_text_input.textSize =
+            this.getString(R.dimen.text_size_edit_text_main).replace("d", "").replace("s", "")
+                .replace("p", "").toFloat()
         val selectionEnd = edit_text_input.selectionEnd
         val selectionStart = edit_text_input.selectionStart
         textStr = edit_text_input.text.toString()
@@ -124,21 +146,53 @@ class MainActivity : AppCompatActivity() {
         onClickBtnChangeTextView(".")
     }
 
-    fun onClickBtnPlus(){
+    private fun onClickBtnPlus() {
         val lastChar = edit_text_input.text.toString()
         onClickBtnChangeTextView("+")
-        Log.d("TAG","What?")
     }
 
-    fun onClickBtnSub(){
+    private fun onClickBtnSub() {
+        val lastChar = edit_text_input.text.toString()
+        onClickBtnChangeTextView("-")
+    }
+
+    private fun onClickBtnMul() {
+        val lastChar = edit_text_input.text.toString()
+        onClickBtnChangeTextView("×")
+    }
+
+    private fun onClickBtnDiv() {
+        val lastChar = edit_text_input.text.toString()
+        onClickBtnChangeTextView("/")
+    }
+
+    private fun onClickBtnSquareRoot() {
+        val currentSelection = edit_text_input.selectionStart
+        onClickBtnChangeTextView("√()")
+        edit_text_input.setSelection(currentSelection + 2)
 
     }
 
-    fun onClickBtnMul(){
-
-    }
-
-    fun onClickBtnDiv(){
-
+    @SuppressLint("ResourceType")
+    private fun onClickBtnEqual() {
+        var strInput = edit_text_input.text.toString()
+        strInput = strInput.replace('×', '*').replace("√", "sqrt").trim()
+        var result = 0.0
+        try {
+            result = Utils().eval(strInput)
+        } catch (e: Error) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
+        }
+        var resultStr = ""
+        if (result % 1 == 0.0) {
+            resultStr = result.toInt().toString()
+        } else resultStr = round(result * 10e6).div(10e6).toString()
+        edit_text_input.text = Editable.Factory.getInstance().newEditable(
+            resultStr
+        )
+        edit_text_input.textSize =
+            this.getString(R.dimen.text_size_edit_text_main_equal).replace("d", "").replace("s", "")
+                .replace("p", "").toFloat()
+        edit_text_input.setSelection(edit_text_input.length())
     }
 }

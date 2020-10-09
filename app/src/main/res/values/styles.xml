@@ -12,7 +12,7 @@
     <item name="android:layout_height">match_parent</item>
     <item name="android:textAlignment">textEnd</item>
     <item name="android:inputType">numberSigned</item>
-    <item name="android:textSize">90sp</item>
+    <item name="android:textSize">@dimen/text_size_edit_text_main</item>
   </style>
 
   <style name="button_func">
